@@ -34,7 +34,7 @@ export default function UpgradePrompt({ onClose, onUpgradeSuccess }) {
 
   return (
   <div className="upgrade-prompt">
-    <div className="prompt-warning">⚠️ You've reached your limit of 3 notes</div>
+    <div className="prompt-warning"> You've reached your limit of 3 notes</div>
     {user.role === "Admin" ? (
         <>
           <div className="card__body" style={{ marginBottom: 10 }}>

@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const mongoose = require("mongoose");
 const serverless = require("serverless-http");
 
 dotenv.config();
@@ -47,6 +46,6 @@ if (process.env.NODE_ENV !== "production") {
   );
 }
 
-// ✅ Export for Vercel
+// Export for Vercel
 module.exports = app;
 module.exports.handler = serverless(app);

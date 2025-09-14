@@ -104,7 +104,7 @@ export default function Dashboard() {
   </button>
 ) : (
   <div style={{ fontSize: 14, color: "#bdbdbf", marginBottom: 10 }}>
-    Only admins can invite new team members
+    contact admins to invite new team members
   </div>
 )}
 

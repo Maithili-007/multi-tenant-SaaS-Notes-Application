@@ -12,7 +12,7 @@ const authenticateToken = async (req, res, next) => {
     const user = await User.findById(decoded.userId);
     if (!user || user.tenant_id !== decoded.tenant_id) return res.status(401).json({ message: "Invalid token" });
 
-    req.user = {
+    req.user = {//attaching user info to request object
       userId: decoded.userId,
       email: decoded.email,
       role: decoded.role,

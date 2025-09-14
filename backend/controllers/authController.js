@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Tenant = require('../models/Tenant');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'changeme-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || 'abc@123';
 
 const initializeTestData = async () => {
   try {
@@ -108,11 +108,10 @@ const inviteUser = async (req, res) => {
     if (existing)
       return res.status(409).json({message: "User already exists"});
 
-    // For demo, always "password" (change in production!)
     const password = "password";
     const newUser = await User.create({
       email,
-      password, // Will be hashed
+      password,
       role,
       tenant_id,
       tenant_slug
