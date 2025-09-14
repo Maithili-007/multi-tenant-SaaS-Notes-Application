@@ -63,6 +63,10 @@ All use password: `password`
 - Click any test account button to auto-fill email and password
 - No manual typing required for evaluation
 
+A Member user was **successfully invited from the Admin page** and added to the Acme tenant.
+- This allows you to test the user invitation flow and confirm Admin role permissions.
+- Example Member account: abc@gmail.com ,password: `password`(role: Member, tenant: Acme)
+
 ### Ready to Test
 1. Visit the frontend URL
 2. Click any test account button on login page
